@@ -33,8 +33,9 @@ public class ClientLoginTestNG{
     @DataProvider(name = "clientUrls")
     public Object[][] getData() {
         return new Object[][] {
-       /*//	1st slot
-        	{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
+  //	1st slot
+        	
+        	/*{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
   			{"https://bytzsoft.net/CrewRosteringACC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringABR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringASH/login.aspx"},
@@ -45,9 +46,9 @@ public class ClientLoginTestNG{
         	
         	{"https://bytzsoft.net/CrewRosteringBAR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringBGS/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringBHA/login.aspx"},//3*/
+        	{"https://bytzsoft.net/CrewRosteringBHA/login.aspx"},//3
         	
-       /*//slot1
+     //slot1
         	{"https://bytzsoft.net/CrewRosteringCAI/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringCRL/login.aspx"},//2
         	
@@ -63,7 +64,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringEMS/login.aspx"},//
         	
         	
-      //3 slot............................
+   //3 slot............................
         	{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFBW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFOR/login.aspx"},
@@ -83,7 +84,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringKAL/login.aspx"},
         	//{"https://bytzsoft.net/CrewRosteringKAS/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringKNG/login.aspx"},//3
-       //..........................
+     ///..........................
         	{"https://bytzsoft.net/CrewRosteringLMW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringLNT/login.aspx"},//2
         	
@@ -99,8 +100,8 @@ public class ClientLoginTestNG{
         	
         	{"https://bytzsoft.net/CrewRosteringPAB/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringPIN/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringPNW/login.aspx"},//3
-     //...............
+        	{"https://bytzsoft.net/CrewRosteringPNW/login.aspx"},//*
+   //...............
         	{"https://bytzsoft.net/CrewRosteringRAJ/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringRJH/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringRTT/login.aspx"},
@@ -114,7 +115,8 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringSHR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSKY/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSOB/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringSAI/login.aspx"},//8-18*/
+        	{"https://bytzsoft.net/CrewRosteringSAI/login.aspx"},
+        	{"https://bytzsoft.net/CrewRosteringSPZ/login.aspx"},//8-18*
         
     //slot 4
        		{"https://bytzsoft.net/CrewRosteringTA2/login.aspx"},
@@ -130,9 +132,9 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringVIM/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringVSC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringVSR/login.aspx"},//4
-        	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1
+        	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1*/
         	
-    /*//  Slot 5
+   //  Slot 5
         	{"https://www.bytzsoft.net/CrewRostering"},
         	{"https://bytzsoft.net/CrewRosteringAPP/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringDMO/login.aspx"},
@@ -140,8 +142,19 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringSVN/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringUSA/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringRCD/login.aspx"},
-        	//6-18-71*/
+        	//6-18-71
         	
+        	
+        	//SMS
+        	/*{"https://www.bytzsoft.net/SMS/FlyPalSMSBTP/Login.aspx"},
+        	{"https://rcdl.bytzsoft.in/SMS/FlyPalSMSRIL/Login.aspx"},
+        	//{"https://www.bytzsoft.net/SMS/FlyPalSMSDMO/Login.aspx"},
+        	{"https://www.bytzsoft.net/SMS/FlyPalSMSPTC/Login.aspx"},
+        	{"https://www.bytzsoft.net/SMS/FlyPalSMSPTW/Login.aspx"},
+        	{"https://www.bytzsoft.net/"
+        			+ "SMS/FlyPalSMSMOD/Login.aspx"},
+        	//{"https://www.bytzsoft.net/SMS/FlyPalSMSMAL/Login.aspx"},
+        	{"https://www.bytzsoft.net/SMS/FlyPalSMSYET/Login.aspx"},*/
         	
         	
             // Add more URLs here
@@ -153,6 +166,7 @@ public class ClientLoginTestNG{
         driver.get(url);
 
         loginPage.login("btpladmin", "8ytzadmin");
+       // License Count Print
        /* driver.findElement(By.xpath("//span[@id='ctl00_lnkLoggedInUser']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[@id='ctl00_lnkProfile']")).click();
@@ -161,6 +175,8 @@ public class ClientLoginTestNG{
         String e=driver.findElement(By.xpath("//span[@id='ctl00_lblCabinCrew']")).getText();
         Thread.sleep(1000);
 		System.out.println("Cabin Count" +e);*/
+        
+        
       
       
 		 Thread.sleep(1000);
