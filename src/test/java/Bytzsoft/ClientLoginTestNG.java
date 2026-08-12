@@ -186,7 +186,7 @@ public class ClientLoginTestNG{
         loginPage.logout();
        
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         }
 
      /*   File scr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
