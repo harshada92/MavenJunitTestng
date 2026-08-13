@@ -42,7 +42,8 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringARO/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringA2Z/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringARJ/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringAR2/login.aspx"},//7
+        	{"https://bytzsoft.net/CrewRosteringAR2/login.aspx"},
+        	{"https://bytzsoft.net/CrewRosteringARA/login.aspx"}//8
         	
         	{"https://bytzsoft.net/CrewRosteringBAR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringBGS/login.aspx"},
@@ -83,7 +84,7 @@ public class ClientLoginTestNG{
         	
         	{"https://bytzsoft.net/CrewRosteringKAL/login.aspx"},
         
-        	{"https://bytzsoft.net/CrewRosteringKNG/login.aspx"},//3
+        	{"https://bytzsoft.net/CrewRosteringKNG/login.aspx"},//2
      ///..........................
         	{"https://bytzsoft.net/CrewRosteringLMW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringLNT/login.aspx"},//2
@@ -116,7 +117,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringSKY/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSOB/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSAI/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringSPZ/login.aspx"},//8-18*
+        	{"https://bytzsoft.net/CrewRosteringSPZ/login.aspx"},//9-18*
         
     //slot 4
        		{"https://bytzsoft.net/CrewRosteringTA2/login.aspx"},
@@ -151,8 +152,7 @@ public class ClientLoginTestNG{
         	//{"https://www.bytzsoft.net/SMS/FlyPalSMSDMO/Login.aspx"},
         	{"https://www.bytzsoft.net/SMS/FlyPalSMSPTC/Login.aspx"},
         	{"https://www.bytzsoft.net/SMS/FlyPalSMSPTW/Login.aspx"},
-        	{"https://www.bytzsoft.net/"
-        			+ "SMS/FlyPalSMSMOD/Login.aspx"},
+        	{"https://www.bytzsoft.net /SMS/FlyPalSMSMOD/Login.aspx"},
         	//{"https://www.bytzsoft.net/SMS/FlyPalSMSMAL/Login.aspx"},
         	{"https://www.bytzsoft.net/SMS/FlyPalSMSYET/Login.aspx"},*/
         	
