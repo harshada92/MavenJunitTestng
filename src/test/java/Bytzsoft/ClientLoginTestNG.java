@@ -66,7 +66,7 @@ public class ClientLoginTestNG{
         	
         	
    //3 slot............................
-        	{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
+        	//{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFBW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFOR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFRE/login.aspx"},

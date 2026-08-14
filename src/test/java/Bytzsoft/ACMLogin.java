@@ -1,8 +1,12 @@
 package Bytzsoft;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,12 +25,25 @@ public class ACMLogin {
     @Test
     public void verifyLoginPageIsOpen() throws InterruptedException {
         System.out.println("Page Title: " + driver.getTitle());
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//button[@id='btnSignIn']"));
-        driver.findElement(By.xpath("//button[@id='btnSignIn']")).click();
-      //input[@id='signin_email']
-      //input[@id='signin_password']
-       driver.findElement(By.xpath("//button[@id='btnSignIn']")).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.id("signin_email")))
+            .sendKeys("harshada@bytzsoft.com");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.id("signin_password")))
+            .sendKeys("harshada@bytzsoft.com");
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.id("btnSignIn")))
+            .click();
+
+        wait.until(ExpectedConditions.urlContains("Dashboard"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.id("Div_NewRequest")))
+        .click();
+      //select[@id='cmbUserApplications']
     }
     
     

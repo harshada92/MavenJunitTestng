@@ -29,6 +29,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
         <artifactId>log4j-core</artifactId>
         <version>2.20.0</version>
     </dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.5</version>
+</dependency>
 
 <dependency>
   <groupId>com.microsoft.playwright</groupId>

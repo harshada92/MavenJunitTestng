@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bytzsoft.ClientLoginTestNG">
+      <class name="Bytzsoft.ACMLogin">
         <methods>
-          <include name="testClientLogin1" invocation-numbers="11 12 13"/>
+          <include name="verifyLoginPageIsOpen"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Bytzsoft.ClientLoginTestNG -->
+      </class> <!-- Bytzsoft.ACMLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
