@@ -73,7 +73,7 @@ package Bytzsoft;
 	        } catch (Exception e) {
 
 	           /* System.out.println("Failed URL : " + url);
-	            System.out.println("Reason : " + e.getMessage());*/
+	            System.out.println("Reason : " + e.getMessage());this show fail case even case pass*/
 
 	            driver.manage().deleteAllCookies();
 
