@@ -1,36 +1,47 @@
 package Bytzsoft;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelUtils {
+public class ExcelReader {
 
-    public static Object[][] getExcelData(String filePath, String sheetName)
-            throws Exception {
+    private String excelPath;
 
-        FileInputStream fis = new FileInputStream(filePath);
+    public ExcelReader(String excelPath) {
+        this.excelPath = excelPath;
+    }
 
-        Workbook workbook = new XSSFWorkbook(fis);
+    public Object[][] getUrlsData() throws Exception {
 
-        Sheet sheet = workbook.getSheet(sheetName);
+        FileInputStream fis = new FileInputStream(excelPath);
+        XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-        int rowCount = sheet.getPhysicalNumberOfRows();
+        Sheet sheet = workbook.getSheetAt(0);
 
-        Object[][] data = new Object[rowCount - 1][1];
+        List<Object[]> data = new ArrayList<>();
 
-        for (int i = 1; i < rowCount; i++) {
+        for (int i = 0; i <= sheet.getLastRowNum(); i++) {
 
-            data[i - 1][0] =
-                    sheet.getRow(i).getCell(0).getStringCellValue();
+            Row row = sheet.getRow(i);
 
+            if (row != null && row.getCell(0) != null) {
+
+                String url = row.getCell(0).getStringCellValue().trim();
+
+                if (!url.isEmpty()) {
+                    data.add(new Object[] { url });
+                }
+            }
         }
 
         workbook.close();
         fis.close();
 
-        return data;
+        return data.toArray(new Object[0][]);
     }
 }

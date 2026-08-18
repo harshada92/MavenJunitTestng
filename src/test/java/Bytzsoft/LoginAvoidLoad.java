@@ -51,6 +51,7 @@ package Bytzsoft;
 
 	            System.out.println("====================================");
 	            System.out.println("Launching URL : " + url);
+	            System.out.println(Thread.currentThread().getId());
 	            System.out.println("====================================");
 
 	            driver.get(url);
@@ -72,8 +73,8 @@ package Bytzsoft;
 
 	        } catch (Exception e) {
 
-	           /* System.out.println("Failed URL : " + url);
-	            System.out.println("Reason : " + e.getMessage());this show fail case even case pass*/
+	            System.out.println("Failed URL : " + url);
+	            System.out.println("Reason : " + e.getMessage());//this show fail case even case pass*/
 
 	            driver.manage().deleteAllCookies();
 
