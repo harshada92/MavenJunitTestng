@@ -181,7 +181,7 @@ public class ClientLoginTestNG{
       
 		 Thread.sleep(1000);
 
-        System.out.println("*** Login success for: " + url + " ***");
+        System.out.println("*** Login success for CRS: " + url + " ***");
 
         loginPage.logout();
        
