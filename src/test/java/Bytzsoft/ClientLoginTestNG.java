@@ -137,8 +137,9 @@ public class ClientLoginTestNG{
         	
    //  Slot 5
         	{"https://www.bytzsoft.net/CrewRostering"},
-        	/*{"https://bytzsoft.net/CrewRosteringAPP/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringDMO/login.aspx"},
+        	{"https://bytzsoft.net/CrewRosteringAPP/login.aspx"},
+        	/*{"https://bytzsoft.net/CrewRosteringDMO/login.aspx"},
+        	
         	{"https://bytzsoft.net/CrewRosteringSYN/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSVN/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringUSA/login.aspx"},
@@ -181,7 +182,7 @@ public class ClientLoginTestNG{
       
 		 Thread.sleep(1000);
 
-        System.out.println("*** Login success for CRS: " + url + " ***");
+        System.out.println("***  Login success for CRS: " + url + " ***");
 
         loginPage.logout();
        
