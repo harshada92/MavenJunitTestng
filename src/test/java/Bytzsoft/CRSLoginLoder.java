@@ -25,7 +25,7 @@ public class CRSLoginLoder {
 
         return new Object[][] {
 
-        	{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
+        /*	{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
   			{"https://bytzsoft.net/CrewRosteringACC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringABR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringASH/login.aspx"},
@@ -107,7 +107,7 @@ public class CRSLoginLoder {
         	{"https://bytzsoft.net/CrewRosteringSKY/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSOB/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSAI/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringSPZ/login.aspx"},//9-18
+        	{"https://bytzsoft.net/CrewRosteringSPZ/login.aspx"},//9-18*/
         
     //slot 4
        		{"https://bytzsoft.net/CrewRosteringTA2/login.aspx"},
@@ -126,7 +126,7 @@ public class CRSLoginLoder {
         	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1
         	
    //  Slot 5
-        	{"https://www.bytzsoft.net/CrewRostering"},
+        	{"https://www.bytzsoft.net/CrewRostering1"},
         	{"https://bytzsoft.net/CrewRosteringAPP/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringDMO/login.aspx"},
         	
