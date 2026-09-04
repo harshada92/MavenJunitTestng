@@ -1,41 +1,31 @@
 package Bytzsoft;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.Duration;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+public class CRSLoginLoder {
+
+    private static final int PAGE_LOAD_TIMEOUT = 30;
+
+    private static final String USERNAME = "btpladmin";
+    private static final String PASSWORD = "8ytzadmin";
 
 
-public class ClientLoginTestNG{                                
-    WebDriver driver;
-    LoginPage loginPage;
+    // ============================================================
+    // CLIENT URLS
+    // ============================================================
 
-    @BeforeClass
-    public void setup() {
-        // Setup ChromeDriver automatically no need to declare path here of driver
-    	//  System.setProperty("webdriver.chrome.driver", "D:\\chromedriver-win64 (3)\\chromedriver-win64 (3)\\chromedriver-win64\\chromedriver.exe");
-	        driver = new ChromeDriver();// Browser is launched
-	        loginPage = new LoginPage(driver);// Pass driver to LoginPage
-	    }
-  
     @DataProvider(name = "clientUrls")
-    public Object[][] getData() {
+    public Object[][] getClientUrls() {
+
         return new Object[][] {
-  //	1st slot
-        	
-        	/*{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
+
+        	{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
   			{"https://bytzsoft.net/CrewRosteringACC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringABR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringASH/login.aspx"},
@@ -133,7 +123,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringVIM/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringVSC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringVSR/login.aspx"},//4
-        	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1*/
+        	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1
         	
    //  Slot 5
         	{"https://www.bytzsoft.net/CrewRostering"},
@@ -157,54 +147,128 @@ public class ClientLoginTestNG{
         	//{"https://www.bytzsoft.net/SMS/FlyPalSMSMAL/Login.aspx"},
         	{"https://www.bytzsoft.net/SMS/FlyPalSMSYET/Login.aspx"},*/
         	
-        	
-            // Add more URLs here
+
         };
     }
 
+
+    // ============================================================
+    // TEST
+    // ============================================================
+
     @Test(dataProvider = "clientUrls")
-    public void testClientLogin1(String url) throws InterruptedException, IOException {
-        driver.get(url);
+    public void testClientLogin(String url) {
 
-        loginPage.login("btpladmin", "8ytzadmin");
-       // License Count Print
-       /* driver.findElement(By.xpath("//span[@id='ctl00_lnkLoggedInUser']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//a[@id='ctl00_lnkProfile']")).click();
-        Thread.sleep(1000);
-       
-        String e=driver.findElement(By.xpath("//span[@id='ctl00_lblCabinCrew']")).getText();
-        Thread.sleep(1000);
-		System.out.println("Cabin Count" +e);*/
-        
-        
-      
-      
-		 Thread.sleep(1000);
+        WebDriver driver = null;
 
-        System.out.println("***  Login success for CRS: " + url + " ***");
+        try {
 
-        loginPage.logout();
-       
+            System.out.println();
+            System.out.println("==================================================");
+            System.out.println("CLIENT : " + url);
+            System.out.println("==================================================");
 
-        Thread.sleep(1000);
-        }
 
-     /*   File scr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File("D:\\temp\\SCREENSHOT\\" + timestamp() + ".png");
-        FileUtils.copyFile(scr, dest);
+            // ------------------------------------------------
+            // Start new browser
+            // ------------------------------------------------
 
-  
-    
+            driver = new ChromeDriver();
 
-    private String timestamp() {
-        return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
-    }*/
+            driver.manage().window().maximize();
 
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
+
+
+            // ------------------------------------------------
+            // Create LoginPage1
+            // ------------------------------------------------
+
+            LoginPage1 loginPage =new LoginPage1(driver);
+
+
+            // ------------------------------------------------
+            // Open client
+            // ------------------------------------------------
+
+            System.out.println("Opening client...");
+
+            driver.get(url);
+
+            System.out.println("Client page opened.");
+
+
+            // ------------------------------------------------
+            // Login
+            // ------------------------------------------------
+
+            System.out.println("Starting login...");
+
+            loginPage.login(USERNAME,PASSWORD);
+
+
+            // ------------------------------------------------
+            // SUCCESS
+            // ------------------------------------------------
+
+            System.out.println();
+            System.out.println("**********************************************");
+            System.out.println("LOGIN SUCCESS");
+            System.out.println("CLIENT : " + url);
+            System.out.println("**********************************************");
+
+
+            // ------------------------------------------------
+            // Logout
+            // ------------------------------------------------
+
+            System.out.println("Logging out...");
+
+            loginPage.logout();
+
+            System.out.println("Logout successful.");
+
+            System.out.println();
+            System.out.println("FINAL RESULT : PASS");
+            System.out.println("CLIENT       : " + url);
+
+
+        } catch (Exception e) {
+
+            // ------------------------------------------------
+            // FAILURE
+            // ------------------------------------------------
+
+            System.out.println();
+            System.out.println("**********************************************");
+            System.out.println("CLIENT FAILED");
+            System.out.println("CLIENT : " + url);
+            System.out.println("ERROR  : " + e.getMessage());
+            System.out.println("**********************************************");
+
+            // Mark this particular client as FAILED
+            Assert.fail("Login failed for client: " + url,e);
+
+
+        } finally {
+
+            // ------------------------------------------------
+            // Always close browser
+            // ------------------------------------------------
+
+            if (driver != null) {
+
+                try {
+
+                    driver.quit();
+
+                    System.out.println("Browser closed.");
+
+                } catch (Exception e) {
+
+                    System.out.println( "Could not close browser.");
+                }
+            }
         }
     }
 }
