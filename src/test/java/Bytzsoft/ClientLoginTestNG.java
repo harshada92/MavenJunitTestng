@@ -35,7 +35,7 @@ public class ClientLoginTestNG{
         return new Object[][] {
   //	1st slot
         	
-        	/*{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
+        /*	{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
   			{"https://bytzsoft.net/CrewRosteringACC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringABR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringASH/login.aspx"},
@@ -66,7 +66,7 @@ public class ClientLoginTestNG{
         	
         	
    //3 slot............................
-        	//{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
+        //{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFBW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFOR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFRE/login.aspx"},
@@ -85,7 +85,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringKAL/login.aspx"},
         
         	{"https://bytzsoft.net/CrewRosteringKNG/login.aspx"},//2
-     ///..........................
+     /*///..........................
         	{"https://bytzsoft.net/CrewRosteringLMW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringLNT/login.aspx"},//2
         	
@@ -103,7 +103,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringPIN/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringPNW/login.aspx"},//
   //...............
-        	{"https://bytzsoft.net/CrewRosteringRAJ/login.aspx"},
+        /*	{"https://bytzsoft.net/CrewRosteringRAJ/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringRJH/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringRTT/login.aspx"},
         	{"https://rcdl.bytzsoft.in/CrewRosteringRIL/Login.aspx"},
@@ -133,10 +133,10 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringVIM/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringVSC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringVSR/login.aspx"},//4
-        	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1*/
+        	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1
         	
    //  Slot 5
-        	{"https://www.bytzsoft.net/CrewRostering1"},
+        	{"https://www.bytzsoft.net/CrewRostering"},
         	{"https://bytzsoft.net/CrewRosteringAPP/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringDMO/login.aspx"},
         	
