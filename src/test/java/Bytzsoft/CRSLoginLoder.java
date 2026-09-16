@@ -127,14 +127,14 @@ public class CRSLoginLoder {
         	{"https://bytzsoft.net/CrewRosteringZES/login.aspx"},//1
         	
    //  Slot 5
-        	{"https://www.bytzsoft.net/CrewRostering"},
+        	
         	{"https://bytzsoft.net/CrewRosteringAPP/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringDMO/login.aspx"},
         	
         	{"https://bytzsoft.net/CrewRosteringSYN/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringSVN/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringUSA/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringRCD/login.aspx"},
+        	
         	//6-18-71
         	
         	

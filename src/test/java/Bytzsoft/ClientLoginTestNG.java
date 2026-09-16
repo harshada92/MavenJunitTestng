@@ -35,7 +35,7 @@ public class ClientLoginTestNG{
         return new Object[][] {
   //	1st slot
         	
-        /*	{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
+        	/*{"https://bytzsoft.net/CrewRostering7AR/login.aspx"},//1
   			{"https://bytzsoft.net/CrewRosteringACC/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringABR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringASH/login.aspx"},
@@ -47,7 +47,7 @@ public class ClientLoginTestNG{
         	
         	{"https://bytzsoft.net/CrewRosteringBAR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringBGS/login.aspx"},
-        	{"https://bytzsoft.net/CrewRosteringBHA/login.aspx"},//3
+        	{"https://bytzsoft.net/CrewRosteringBHA/login.aspx"},//3*/
         	
      //slot1
         	{"https://bytzsoft.net/CrewRosteringCAI/login.aspx"},
@@ -66,7 +66,7 @@ public class ClientLoginTestNG{
         	
         	
    //3 slot............................
-        //{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
+       /* //{"https://bytzsoft.net/CrewRosteringFB2/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFBW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFOR/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringFRE/login.aspx"},
@@ -85,7 +85,7 @@ public class ClientLoginTestNG{
         	{"https://bytzsoft.net/CrewRosteringKAL/login.aspx"},
         
         	{"https://bytzsoft.net/CrewRosteringKNG/login.aspx"},//2
-     /*///..........................
+     ///..........................
         	{"https://bytzsoft.net/CrewRosteringLMW/login.aspx"},
         	{"https://bytzsoft.net/CrewRosteringLNT/login.aspx"},//2
         	
